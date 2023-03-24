@@ -5,7 +5,7 @@
 cp .env.example .env
 ```
 
-## Yarn or NPM Install
+## Yarn Install
 
 ```bash
 yarn
