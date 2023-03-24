@@ -8,12 +8,15 @@ import {
   faRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
 import AppRouter from "./routes";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "./styles/home.scss"
-import "./styles/index.scss"
+import { AppContextProvider } from "./contexts";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/home.scss";
+import "./styles/index.scss";
 
 library.add(fas, faSquarePen, faTrashCan, faUser, faRightFromBracket);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <AppRouter />
+  <AppContextProvider>
+    <AppRouter />
+  </AppContextProvider>
 );
